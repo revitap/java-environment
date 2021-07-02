@@ -1,59 +1,59 @@
-
 package main;
+
+import java.util.Scanner;
 
 public class Converter {
 
 	public static void main(String[] args) {
-		// 1. create int variable named menuSelection
-		int menuSelection;
 		
-		// Display menu items
-		menuSelection = Keyin.inInt("Please select an option:");
-		System.out.println("1. Cups to Teaspoons");
-		System.out.println("2. Miles to Kilometers");
-		System.out.println("3. US Gallons to Imperial Gallons");
-		System.out.println("4. Quit");
+		Scanner input = new Scanner(System.in);		
+		int menuSelection = 0;
 		
-		// Switch
-		switch (menuSelection) {
-		case 1: 
-			System.out.println("Option 1 selected");
-			break;
-		case 2:
-			System.out.println("Option 2 selected");
-			break;
-		case 3:
-			System.out.println("Option 3 selected");
-			break;
-		case 4:
-			System.out.println("Quit selected. Goodbye.");
-			break;
-		default:
-			System.out.println("Invalid selection");
-		
-		
-		
-		// 2. create while loop w/condtion
-		//while (menuSelection != /*last menu option */){
-			// 2.1. print menu
-//			System.out.println("Please select an option:\r\n"
-//					+ "1. Cups to Teaspoons\r\n"
-//					+ "2. Miles to Kilometers\r\n"
-//					+ "3. US Gallons to Imperial Gallons\r\n"
-//					+ "4. Quit");  // print menu
-//		while (on) {
-//			System.out.println("Please select an option:");
-//			on = false;
-//			
-//			// 2.2. create scanner to collect user's menuSelection
-//			Scanner scanner = new Scanner(System.in);
+		while (menuSelection != 4) {
+			System.out.println("Please select an option:\n");
+			System.out.print("1. Cups To Teaspoons\n");
+			System.out.print("2. Miles To Kilometers\n");
+			System.out.print("3. US Gallons to Imperial Gallons\n");
+			System.out.print("4. Quit");
 			
-			// 2.3. create switch to collect user's qty of first unit, convert to second unit, and print output
+			menuSelection = input.nextInt();
 			
+			switch(menuSelection) {
+			
+			case 1: 
+				// Cups to Teaspoons
+				int cupNum, tspNum;
+				System.out.println("Please enter number of cups: ");
+				cupNum = input.nextInt();
+				tspNum = cupNum * 48;
+				System.out.println(cupNum + " cups is equal to " + tspNum + " teaspoons\n");
+				break;
+				
+			case 2:
+				// Miles to Kilometers
+				double mileNum, kilometerNum;
+				System.out.println("Please enter number of miles: ");
+				mileNum = input.nextInt();
+				kilometerNum = mileNum * 1.609344;
+				System.out.println(mileNum + " miles is equal to " + kilometerNum + " kilometers\n");
+				break;
+				
+			case 3:
+				//US Gallons to Imperial Gallons
+				double usgNum, igNum;
+				System.out.println("Please enter number of US gallons: ");
+				usgNum = input.nextInt();
+				igNum = usgNum * 0.83267382;
+				System.out.println(usgNum + " US gallons is equal to " + igNum + " Imperial gallons\n");
+				break;
+				
+			case 4:
+				System.out.println("Quit selected. Goodbye.");
+				break;
+				
+			default:
+				System.out.println("Invalid option. Please select options 1 through 4.");			
+			}
 		}
-		
-		
-
 	}
-
 }
