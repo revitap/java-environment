@@ -42,14 +42,12 @@ public class ConverterImproved {
 					double tspNum, tbsNum, cupNum;
 					System.out.println("Please enter number of teaspoons: ");
 					tspNum = sc.nextDouble();
-					tbsNum = tspNum * 0.333333;
 					System.out.println(tspNum + " teaspoon(s) is equal to " + convertTspToTbs(tspNum) + " tablespoons.\n");
 					break;
 				case 2:
 					// Teaspoons to Cups
 					System.out.println("Please enter number of teaspoons: ");
 					tspNum = sc.nextDouble();
-					cupNum = tspNum * 0.0208333;
 					System.out.println(tspNum + " teaspoon(s) is equal to " + convertTspToC(tspNum) + " cups.\n");
 					break;
 				default:
@@ -74,14 +72,12 @@ public class ConverterImproved {
 					double ftNum, mileNum, mtrNum, kilometerNum;
 					System.out.println("Please enter number of feet: ");
 					ftNum = sc.nextDouble();
-					mtrNum = ftNum * 0.3048;
 					System.out.println(ftNum + " foot/feet is equal to " + convertFtToM(ftNum) + " meters.\n");
 					break;
 				case 2:
 					// Miles to Kilometers
 					System.out.println("Please enter number of miles: ");
 					mileNum = sc.nextDouble();
-					kilometerNum = mileNum * 0.621371;
 					System.out.println(mileNum + " mile(s) is equal to " + convertMiToKm(mileNum) + " kilometers.\n");
 					break;
 				default:
