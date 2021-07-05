@@ -43,14 +43,14 @@ public class ConverterImproved {
 					System.out.println("Please enter number of teaspoons: ");
 					tspNum = sc.nextDouble();
 					tbsNum = tspNum * 0.333333;
-					System.out.println(tspNum + " teaspoon(s) is equal to " + tbsNum + " tablespoons.\n");
+					System.out.println(tspNum + " teaspoon(s) is equal to " + convertTspToTbs(tspNum) + " tablespoons.\n");
 					break;
 				case 2:
 					// Teaspoons to Cups
 					System.out.println("Please enter number of teaspoons: ");
 					tspNum = sc.nextDouble();
 					cupNum = tspNum * 0.0208333;
-					System.out.println(tspNum + " teaspoon(s) is equal to " + cupNum + " cups.\n");
+					System.out.println(tspNum + " teaspoon(s) is equal to " + convertTspToC(tspNum) + " cups.\n");
 					break;
 				default:
 					System.out.println("Invalid choice");
@@ -75,14 +75,14 @@ public class ConverterImproved {
 					System.out.println("Please enter number of feet: ");
 					ftNum = sc.nextDouble();
 					mtrNum = ftNum * 0.3048;
-					System.out.println(ftNum + " foot/feet is equal to " + mtrNum + " meters.\n");
+					System.out.println(ftNum + " foot/feet is equal to " + convertFtToM(ftNum) + " meters.\n");
 					break;
 				case 2:
 					// Miles to Kilometers
 					System.out.println("Please enter number of miles: ");
 					mileNum = sc.nextDouble();
 					kilometerNum = mileNum * 0.621371;
-					System.out.println(mileNum + " mile(s) is equal to " + kilometerNum + " kilometers.\n");
+					System.out.println(mileNum + " mile(s) is equal to " + convertMiToKm(mileNum) + " kilometers.\n");
 					break;
 				default:
 					System.out.println("Invalid choice");
@@ -102,6 +102,23 @@ public class ConverterImproved {
 			}
 		}
 					
+	}
+	
+	// Break each unit conversion to a separate method	
+	public static double convertTspToTbs(double tspNum) {
+		return tspNum * 0.333333;
+	}
+	
+	public static double convertTspToC(double tspNum) {
+		return tspNum * 0.0208333;
+	}
+	
+	public static double convertFtToM(double ftNum) {
+		return ftNum * 0.3048;
+	}
+	
+	public static double convertMiToKm(double mileNum) {
+		return mileNum * 0.621371;
 	}
 
 }
