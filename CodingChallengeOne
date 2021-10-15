@@ -1,0 +1,47 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+/*
+ * Coding Challenge:
+ * 
+ * Write a Java Program to iterate HashMap using While and advance for loop.
+ * 
+ */
+
+public class HashMapChallenge {
+
+	public static void main(String[] args) {
+		
+		// create HashMap 
+		HashMap<Integer, String> texasCities = new HashMap<Integer, String>();
+		
+		// add keys and values
+		texasCities.put(1, "Austin");
+		texasCities.put(2, "Dallas");
+		texasCities.put(3, "Houston");
+		texasCities.put(4, "San Antonio");
+		
+		// iterator
+        Iterator<Entry<Integer, String> > new_Iterator
+            = texasCities.entrySet().iterator();
+ 
+        // while loop
+        while (new_Iterator.hasNext()) {
+            Map.Entry<Integer, String> new_Map
+                = (Map.Entry<Integer, String>)
+                      new_Iterator.next();
+            // display
+            System.out.println(new_Map.getKey() + " = "
+                               + new_Map.getValue());
+        }
+        
+		// for loop
+		for (String i : texasCities.values()) {
+		  System.out.println(i);
+		}
+		
+	}
+
+}
